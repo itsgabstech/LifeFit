@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+
+:root {
+  --primary: #fbbf24;
+  --primary-dark: #f59e0b;
+  --background: #0f172a;
+  --foreground: #ffffff;
+  --secondary: #1e293b;
+  --border: #334155;
+}
+
+@theme inline {
+  --font-sans: 'Geist', sans-serif;
+  --font-mono: 'Geist Mono', monospace;
+  --color-primary: var(--primary);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
