@@ -1,4 +1,3 @@
-// PESSOA 3 - PR 3: Complete this component
 // TODO: Implementar barra de navegação inferior com 4 botões
 
 interface NavigationProps {
