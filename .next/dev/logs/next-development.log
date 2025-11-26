@@ -1,0 +1,270 @@
+[00:00:00.690] Server  LOG      ✓ Ready in 473ms
+[00:01:39.483] Server  LOG      ✓ Compiled in 182ms
+[00:01:44.408] Server  LOG      ✓ Compiled in 86ms
+[00:02:01.186] Server  LOG      ✓ Compiled in 80ms
+[00:02:40.111] Server  LOG      ✓ Compiled in 73ms
+[00:03:24.175] Server  LOG      ✓ Compiled in 148ms
+[00:03:26.015] Browser ERROR   ./components/daily-plan.tsx:99:54
+Parsing ecmascript source code failed
+   97 |                                             : 'bg-amber-400'
+   98 |                                     }`}
+>  99 |                                     style={{ width: ${item.progress}% }}
+      |                                                      ^
+  100 |                                 ></div>
+  101 |                             </div>
+  102 |                             <p className="text-xs text-slate-400 mt-1">{item.progress}%</p>
+
+Expected '</', got '{'
+
+Import traces:
+  Client Component Browser:
+    ./components/daily-plan.tsx [Client Component Browser]
+    ./components/home.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/daily-plan.tsx [Client Component SSR]
+    ./components/home.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:04:41.043] Server  LOG      ✓ Compiled in 55ms
+[00:04:42.080] Browser ERROR   ./components/daily-plan.tsx:99:54
+Parsing ecmascript source code failed
+   97 |                                             : 'bg-amber-400'
+   98 |                                     }`}
+>  99 |                                     style={{ width: ${item.progress}% }}
+      |                                                      ^
+  100 |                                 ></div>
+  101 |                             </div>
+  102 |                             <p className="text-xs text-slate-400 mt-1">{item.progress}%</p>
+
+Expected '</', got '{'
+
+Import traces:
+  Client Component Browser:
+    ./components/daily-plan.tsx [Client Component Browser]
+    ./components/home.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/daily-plan.tsx [Client Component SSR]
+    ./components/home.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:06:47.882] Server  LOG      ✓ Compiled in 98ms
+[00:07:12.670] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+              <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+                <RedirectBoundary>
+                  <RedirectErrorBoundary router={{...}}>
+                    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+                      <SegmentViewNode type="page" pagePath="page.tsx">
+                        <SegmentTrieNode>
+                        <ClientPageRoot Component={function App} serverProvidedParams={{...}}>
+                          <App params={Promise} searchParams={Promise}>
+                            <Home userName="rafhael" onLogout={function handleLogout}>
+                              <main
++                               className="min-h-screen bg-slate-950 text-white pb-24"
+-                               className="min-h-screen bg-slate-950 text-white flex items-center justify-center p-4"
+                              >
+                                <Header userName="rafhael" onLogout={function handleLogout}>
+                                  <div
++                                   className="bg-slate-900 border-b border-slate-800 sticky top-0 z-10"
+-                                   className="w-full max-w-md"
+                                  >
+                                    <div
++                                     className="px-4 py-4 max-w-2xl mx-auto"
+-                                     className="text-center mb-8"
+                                    >
+-                                     <div className="flex justify-center mb-4">
+-                                     <h1 className="text-3xl font-bold mb-2">
+-                                     <p className="text-slate-400">
+                                ...
+                      ...
+                    ...
+        ...
+
+[00:07:15.089] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+              <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+                <RedirectBoundary>
+                  <RedirectErrorBoundary router={{...}}>
+                    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+                      <SegmentViewNode type="page" pagePath="page.tsx">
+                        <SegmentTrieNode>
+                        <ClientPageRoot Component={function App} serverProvidedParams={{...}}>
+                          <App params={Promise} searchParams={Promise}>
+                            <Home userName="rafhael" onLogout={function handleLogout}>
+                              <main
++                               className="min-h-screen bg-slate-950 text-white pb-24"
+-                               className="min-h-screen bg-slate-950 text-white flex items-center justify-center p-4"
+                              >
+                                <Header userName="rafhael" onLogout={function handleLogout}>
+                                  <div
++                                   className="bg-slate-900 border-b border-slate-800 sticky top-0 z-10"
+-                                   className="w-full max-w-md"
+                                  >
+                                    <div
++                                     className="px-4 py-4 max-w-2xl mx-auto"
+-                                     className="text-center mb-8"
+                                    >
+-                                     <div className="flex justify-center mb-4">
+-                                     <h1 className="text-3xl font-bold mb-2">
+-                                     <p className="text-slate-400">
+                                ...
+                      ...
+                    ...
+        ...
+
+[00:10:44.196] Server  LOG      ✓ Compiled in 159ms
+[00:12:43.215] Server  LOG      ✓ Compiled in 119ms
+[00:13:09.590] Server  LOG      ✓ Compiled in 135ms
+[00:13:58.940] Server  LOG      ✓ Compiled in 111ms
+[00:17:22.536] Server  LOG      ✓ Compiled in 98ms
+[00:17:27.587] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+              <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+                <RedirectBoundary>
+                  <RedirectErrorBoundary router={{...}}>
+                    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+                      <SegmentViewNode type="page" pagePath="page.tsx">
+                        <SegmentTrieNode>
+                        <ClientPageRoot Component={function App} serverProvidedParams={{...}}>
+                          <App params={Promise} searchParams={Promise}>
+                            <Home userName="rafhael" onLogout={function handleLogout}>
+                              <main
++                               className="min-h-screen bg-slate-950 text-white pb-24 relative overflow-hidden"
+-                               className="min-h-screen bg-slate-950 text-white flex items-center justify-center p-4"
+                              >
+                                <div
++                                 className="fixed top-0 left-0 w-full h-96 bg-gradient-to-b from-amber-500/10 to-tran..."
+-                                 className="w-full max-w-md"
+                                >
+-                                 <div className="text-center mb-8">
+-                                 <form className="space-y-4">
+-                                 <p className="text-center text-slate-400 text-sm mt-6">
+                                ...
+                      ...
+                    ...
+        ...
+
+[00:17:42.421] Server  LOG      ✓ Compiled in 74ms
+[00:17:42.535] Browser ERROR   ./components/home.tsx:21:16
+Parsing ecmascript source code failed
+  19 |         calories: "120 kcal",
+  20 |         duration: "20 min",
+> 21 |         image: "
+     |                ^
+  22 |
+  23 |         http://googleusercontent.com/image_collection/image_retrieval/9999601420300645078_0
+  24 |             "
+
+Unterminated string constant
+
+Import traces:
+  Client Component Browser:
+    ./components/home.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/home.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:18:49.031] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+              <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+                <RedirectBoundary>
+                  <RedirectErrorBoundary router={{...}}>
+                    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+                      <SegmentViewNode type="page" pagePath="page.tsx">
+                        <SegmentTrieNode>
+                        <ClientPageRoot Component={function App} serverProvidedParams={{...}}>
+                          <App params={Promise} searchParams={Promise}>
+                            <Home userName="rafhael" onLogout={function handleLogout}>
+                              <main
++                               className="min-h-screen bg-slate-950 text-white pb-24 relative"
+-                               className="min-h-screen bg-slate-950 text-white flex items-center justify-center p-4"
+                              >
+                                <div
++                                 className="fixed top-0 left-0 w-full h-96 bg-gradient-to-b from-amber-500/10 to-tran..."
+-                                 className="w-full max-w-md"
+                                >
+-                                 <div className="text-center mb-8">
+-                                 <form className="space-y-4">
+-                                 <p className="text-center text-slate-400 text-sm mt-6">
+                                ...
+                      ...
+                    ...
+        ...
+
+[00:20:48.186] Server  LOG      ✓ Compiled in 51ms
+[00:24:24.293] Server  LOG      ✓ Compiled in 123ms
+[00:26:54.524] Server  LOG      ✓ Compiled in 65ms
+[00:27:33.006] Server  LOG      ✓ Compiled in 104ms
